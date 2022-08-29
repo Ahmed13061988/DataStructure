@@ -38,10 +38,15 @@ const [x, y, z] = arr;
 
 console.log(x, y, z);
 
-const [first, second] = restaurant.categories;
+let [first, second] = restaurant.categories;
 
 const [, , third, forth] = restaurant.categories;
 
 console.log(first, second);
 
 console.log(third, forth);
+
+const temp = first;
+first = second;
+second = temp;
+console.log(first, second);

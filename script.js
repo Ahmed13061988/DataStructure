@@ -14,6 +14,9 @@ const restaurant = {
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
+  orderDelivery: function (obj) {
+    console.log(obj);
+  },
 
   openingHours: {
     thu: {
@@ -57,6 +60,13 @@ const {
   fri: { open: o, close: c },
 } = openingHours;
 console.log(o, c);
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Via del Sole, 21',
+  mainIndex: 2,
+  startIndex: 2,
+});
 // const arr = [1, 2, 3];
 
 // const a = arr[0];

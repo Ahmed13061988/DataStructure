@@ -57,6 +57,7 @@ const restaurant = {
 // console.log([first, second]);
 //console.log(restaurant.order(2, 1));
 
+//Nested distructuring
 const nested = [2, 4, [5, 6]];
 
 let [i, , [j, k]] = nested;
@@ -65,3 +66,7 @@ console.log(i, j, k);
 // let [firstIndex, , secondIndex] = nested;
 // let [first, second] = secondIndex;
 // console.log(firstIndex, first, second);
+
+//Default values
+const [p = 1, q = 1, r = 1] = [8, 9]; //Setting a default value
+console.log(p, q, r);

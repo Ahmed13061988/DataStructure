@@ -55,4 +55,10 @@ const restaurant = {
 // console.log(first, second);
 // [first, second] = [second, first];
 // console.log([first, second]);
-console.log(restaurant.order(2, 1));
+//console.log(restaurant.order(2, 1));
+
+const nested = [2, 4, [5, 6]];
+
+let [firstIndex, , secondIndex] = nested;
+let [first, second] = secondIndex;
+console.log(firstIndex, first, second);

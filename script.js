@@ -31,6 +31,9 @@ const restaurant = {
   },
 };
 
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
 // const arr = [1, 2, 3];
 
 // const a = arr[0];
@@ -58,15 +61,15 @@ const restaurant = {
 //console.log(restaurant.order(2, 1));
 
 //Nested distructuring
-const nested = [2, 4, [5, 6]];
+// const nested = [2, 4, [5, 6]];
 
-let [i, , [j, k]] = nested;
-console.log(i, j, k);
+// let [i, , [j, k]] = nested;
+// console.log(i, j, k);
 
 // let [firstIndex, , secondIndex] = nested;
 // let [first, second] = secondIndex;
 // console.log(firstIndex, first, second);
 
 //Default values
-const [p = 1, q = 1, r = 1] = [8, 9]; //Setting a default value
-console.log(p, q, r);
+// const [p = 1, q = 1, r = 1] = [8, 9]; //Setting a default value
+// console.log(p, q, r);

@@ -45,6 +45,13 @@ const { menu = [], starterMenu: starters = [] } = restaurant;
 
 console.log(menu, starters);
 
+//Mutating a variables in Object
+let a = 111;
+let b = 999;
+const obj = { a: 23, b: 7, c: 14 };
+({ a, b } = obj);
+console.log(a, b);
+
 // const arr = [1, 2, 3];
 
 // const a = arr[0];

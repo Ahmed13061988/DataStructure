@@ -59,6 +59,9 @@ const restaurant = {
 
 const nested = [2, 4, [5, 6]];
 
-let [firstIndex, , secondIndex] = nested;
-let [first, second] = secondIndex;
-console.log(firstIndex, first, second);
+let [i, , [j, k]] = nested;
+console.log(i, j, k);
+
+// let [firstIndex, , secondIndex] = nested;
+// let [first, second] = secondIndex;
+// console.log(firstIndex, first, second);

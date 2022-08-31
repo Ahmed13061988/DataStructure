@@ -147,4 +147,10 @@ console.log(letters);
 
 const ing = ['Parmishan', 'Meat', 'Red Souse'];
 
-restaurant.orderPasta(...ing);
+const ingredients = [
+  prompt("let's make pasta! Ingredient 1?"),
+  prompt('Ingredient 2?'),
+  prompt('Ingredient 3?'),
+];
+
+restaurant.orderPasta(...ingredients);

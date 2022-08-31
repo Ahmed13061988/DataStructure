@@ -122,4 +122,12 @@ console.log(...newArr);
 
 const newMenu = [...restaurant.mainMenu, `Gnocci`];
 
-console.log(newMenu);
+//console.log(newMenu);
+
+//Copy array
+
+const mainMenuCopy = [...restaurant.mainMenu];
+
+//Join two arrays together
+const menu1 = [...restaurant.starterMenu, ...mainMenuCopy];
+console.log(menu1, 'here');

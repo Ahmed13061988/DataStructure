@@ -130,4 +130,11 @@ const mainMenuCopy = [...restaurant.mainMenu];
 
 //Join two arrays together
 const menu1 = [...restaurant.starterMenu, ...mainMenuCopy];
-console.log(menu1, 'here');
+console.log(menu1);
+
+//iterables are arrays, strings, maps and sets. Not objects
+
+//String example
+const str = 'Ahmed';
+const letters = [...str, ' ', 'H.'];
+console.log(letters);

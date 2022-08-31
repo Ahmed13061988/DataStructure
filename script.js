@@ -145,12 +145,17 @@ const str = 'Ahmed';
 const letters = [...str, ' ', 'H.'];
 console.log(letters);
 
-const ing = ['Parmishan', 'Meat', 'Red Souse'];
+//Real world example
+// const ingredients = [
+//   prompt("let's make pasta! Ingredient 1?"),
+//   prompt('Ingredient 2?'),
+//   prompt('Ingredient 3?'),
+// ];
 
-const ingredients = [
-  prompt("let's make pasta! Ingredient 1?"),
-  prompt('Ingredient 2?'),
-  prompt('Ingredient 3?'),
-];
+// restaurant.orderPasta(...ingredients);
 
-restaurant.orderPasta(...ingredients);
+//Objects
+
+const newRestaurant = { ...restaurant, rating: '5 stars' };
+
+console.log(newRestaurant, 'here');

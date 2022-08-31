@@ -49,24 +49,24 @@ const {
   categories: tags,
 } = restaurant;
 
-console.log(restaurantName, hours, tags);
+//console.log(restaurantName, hours, tags);
 
 const { menu = [], starterMenu: starters = [] } = restaurant;
 
-console.log(menu, starters);
+//console.log(menu, starters);
 
 //Mutating a variables in Object
 let a = 111;
 let b = 999;
 const obj = { a: 23, b: 7, c: 14 };
 ({ a, b } = obj);
-console.log(a, b);
+//console.log(a, b);
 
 //Nested object distruction
 const {
   fri: { open: o, close: c },
 } = openingHours;
-console.log(o, c);
+//console.log(o, c);
 
 restaurant.orderDelivery({
   time: '22:30',
@@ -113,3 +113,6 @@ restaurant.orderDelivery({
 //Default values
 // const [p = 1, q = 1, r = 1] = [8, 9]; //Setting a default value
 // console.log(p, q, r);
+const arr = [7, 8, 9];
+const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+console.log(badNewArr);

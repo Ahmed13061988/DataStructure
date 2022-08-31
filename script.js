@@ -25,6 +25,12 @@ const restaurant = {
     );
   },
 
+  orderPasta: function (ing1, ing2, ing3) {
+    console.log(
+      `here is you deliciuos pasta with ${ing1}, ${ing2} and ${ing3}`
+    );
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -138,3 +144,7 @@ console.log(menu1);
 const str = 'Ahmed';
 const letters = [...str, ' ', 'H.'];
 console.log(letters);
+
+const ing = ['Parmishan', 'Meat', 'Red Souse'];
+
+restaurant.orderPasta(...ing);

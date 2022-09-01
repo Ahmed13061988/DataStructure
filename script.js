@@ -136,7 +136,7 @@ const mainMenuCopy = [...restaurant.mainMenu];
 
 //Join two arrays together
 const menu1 = [...restaurant.starterMenu, ...mainMenuCopy];
-console.log(menu1);
+//console.log(menu1);
 
 //iterables are arrays, strings, maps and sets. Not objects
 
@@ -171,5 +171,21 @@ const [pizza, , risotto, ...otherFood] = [
 
 //console.log(pizza, risotto, otherFood);
 
+//Objects
 const { sat, ...weekdays } = restaurant.openingHours;
-console.log(weekdays);
+//console.log(weekdays);
+
+//Functions
+
+const add = function (...numbers) {
+  let result = [...numbers];
+  let sum = 0;
+  for (let i = 0; i < result.length; i++) {
+    sum += result[i];
+  }
+  return sum;
+};
+
+// add(2, 3);
+console.log(add(5, 3, 7, 2));
+//add(8, 5, 4, 1, 6, 7);

@@ -119,12 +119,12 @@ restaurant.orderDelivery({
 //Default values
 // const [p = 1, q = 1, r = 1] = [8, 9]; //Setting a default value
 // console.log(p, q, r);
-const arr = [7, 8, 9];
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
-console.log(badNewArr);
-const newArr = [1, 2, ...arr];
-console.log(newArr);
-console.log(...newArr);
+// const arr = [7, 8, 9];
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// console.log(badNewArr);
+// const newArr = [1, 2, ...arr];
+// console.log(newArr);
+// console.log(...newArr);
 
 const newMenu = [...restaurant.mainMenu, `Gnocci`];
 
@@ -143,7 +143,7 @@ console.log(menu1);
 //String example
 const str = 'Ahmed';
 const letters = [...str, ' ', 'H.'];
-console.log(letters);
+// console.log(letters);
 
 //Real world example
 // const ingredients = [
@@ -156,6 +156,10 @@ console.log(letters);
 
 //Objects
 
-const newRestaurant = { ...restaurant, rating: '5 stars' };
+// const newRestaurant = { ...restaurant, rating: '5 stars' };
 
-console.log(newRestaurant, 'here');
+// console.log(newRestaurant, 'here');
+
+const [f, d, ...others] = [1, 2, 3, 4, 5];
+
+console.log(others);

@@ -163,3 +163,10 @@ const letters = [...str, ' ', 'H.'];
 const [f, d, ...others] = [1, 2, 3, 4, 5];
 
 console.log(others);
+
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+
+console.log(pizza, risotto, otherFood);

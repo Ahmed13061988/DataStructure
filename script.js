@@ -31,6 +31,10 @@ const restaurant = {
     );
   },
 
+  orderPizza: function (mainIngredient, ...otherIngredients) {
+    console.log(mainIngredient, otherIngredients);
+  },
+
   openingHours: {
     thu: {
       open: 12,
@@ -178,14 +182,17 @@ const { sat, ...weekdays } = restaurant.openingHours;
 //Functions
 
 const add = function (...numbers) {
-  let result = [...numbers];
   let sum = 0;
-  for (let i = 0; i < result.length; i++) {
-    sum += result[i];
-  }
+  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
   return sum;
 };
 
-// add(2, 3);
+console.log(add(2, 3));
 console.log(add(5, 3, 7, 2));
-//add(8, 5, 4, 1, 6, 7);
+console.log(add(8, 5, 4, 1, 6, 7));
+
+const x = [23, 5, 7];
+
+console.log(add(...x));
+
+restaurant.orderPizza('mashrooms', 'onion', 'olives', 'spinach');

@@ -245,3 +245,9 @@ if (restaurant.orderPizza) {
   restaurant.orderPizza('mushrooms', 'salami');
 }
 restaurant.orderPizza && restaurant.orderPizza('mashrooms', 'salami');
+
+//Nullish operator ??
+
+restaurant.guests = 0;
+const guest = restaurant.guest ?? 10;
+console.log(guest);

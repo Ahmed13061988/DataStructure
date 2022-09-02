@@ -32,7 +32,13 @@ const restaurant = {
   },
 
   orderPizza: function (mainIngredient, ...otherIngredients) {
-    console.log(mainIngredient, otherIngredients);
+    if (otherIngredients.length === 0) {
+      console.log(`Your order is ${mainIngredient} Pizza`);
+    } else {
+      console.log(
+        `Your order is ${mainIngredient} pizza with ${otherIngredients}`
+      );
+    }
   },
 
   openingHours: {
@@ -130,69 +136,89 @@ restaurant.orderDelivery({
 // console.log(newArr);
 // console.log(...newArr);
 
-const newMenu = [...restaurant.mainMenu, `Gnocci`];
+// const newMenu = [...restaurant.mainMenu, `Gnocci`];
 
-//console.log(newMenu);
+// //console.log(newMenu);
 
-//Copy array
+// //Copy array
 
-const mainMenuCopy = [...restaurant.mainMenu];
+// const mainMenuCopy = [...restaurant.mainMenu];
 
-//Join two arrays together
-const menu1 = [...restaurant.starterMenu, ...mainMenuCopy];
-//console.log(menu1);
+// //Join two arrays together
+// const menu1 = [...restaurant.starterMenu, ...mainMenuCopy];
+// //console.log(menu1);
 
-//iterables are arrays, strings, maps and sets. Not objects
+// //iterables are arrays, strings, maps and sets. Not objects
 
-//String example
-const str = 'Ahmed';
-const letters = [...str, ' ', 'H.'];
-// console.log(letters);
+// //String example
+// const str = 'Ahmed';
+// const letters = [...str, ' ', 'H.'];
+// // console.log(letters);
 
-//Real world example
-// const ingredients = [
-//   prompt("let's make pasta! Ingredient 1?"),
-//   prompt('Ingredient 2?'),
-//   prompt('Ingredient 3?'),
+// //Real world example
+// // const ingredients = [
+// //   prompt("let's make pasta! Ingredient 1?"),
+// //   prompt('Ingredient 2?'),
+// //   prompt('Ingredient 3?'),
+// // ];
+
+// // restaurant.orderPasta(...ingredients);
+
+// //Objects
+
+// // const newRestaurant = { ...restaurant, rating: '5 stars' };
+
+// // console.log(newRestaurant, 'here');
+
+// const [f, d, ...others] = [1, 2, 3, 4, 5];
+
+// //console.log(others);
+
+// const [pizza, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
 // ];
 
-// restaurant.orderPasta(...ingredients);
+// //console.log(pizza, risotto, otherFood);
 
-//Objects
+// //Objects
+// const { sat, ...weekdays } = restaurant.openingHours;
+// //console.log(weekdays);
 
-// const newRestaurant = { ...restaurant, rating: '5 stars' };
+// //Functions
 
-// console.log(newRestaurant, 'here');
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) sum += numbers[i];
+//   return sum;
+// };
 
-const [f, d, ...others] = [1, 2, 3, 4, 5];
+// console.log(add(2, 3));
+// console.log(add(5, 3, 7, 2));
+// console.log(add(8, 5, 4, 1, 6, 7));
 
-//console.log(others);
+// const x = [23, 5, 7];
 
-const [pizza, , risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
+// console.log(add(...x));
 
-//console.log(pizza, risotto, otherFood);
+// restaurant.orderPizza('mashrooms', 'onion', 'olives', 'spinach');
+// restaurant.orderPizza('Chicken');
 
-//Objects
-const { sat, ...weekdays } = restaurant.openingHours;
-//console.log(weekdays);
+// let people = 'ahmed';
 
-//Functions
+// const anythingElse = [...people];
 
-const add = function (...numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) sum += numbers[i];
-  return sum;
-};
+// console.log(people);
 
-console.log(add(2, 3));
-console.log(add(5, 3, 7, 2));
-console.log(add(8, 5, 4, 1, 6, 7));
+// console.log(anythingElse);
 
-const x = [23, 5, 7];
+//||
+console.log(3 || 'AHMED'); // truthy || truthy
 
-console.log(add(...x));
+console.log(0 || 'hello'); // falsy || truthy
 
-restaurant.orderPizza('mashrooms', 'onion', 'olives', 'spinach');
+console.log(true || false);
+
+console.log(true || 0);
+
+console.log(false || false);

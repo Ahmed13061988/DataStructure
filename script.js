@@ -222,3 +222,13 @@ console.log(true || false);
 console.log(true || 0);
 
 console.log(false || false);
+
+console.log(undefined || 0 || '' || 'Hello' || 23 || null); // this will return the first truthy value;
+
+console.log(undefined || null || false || 0 || '');
+
+const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+
+console.log(guests1);
+
+const guests2 = restaurant.numGuests || 10;

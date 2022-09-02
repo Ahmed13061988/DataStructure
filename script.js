@@ -213,6 +213,7 @@ restaurant.orderDelivery({
 // console.log(anythingElse);
 
 //||
+console.log('------OR------');
 console.log(3 || 'AHMED'); // truthy || truthy
 
 console.log(0 || 'hello'); // falsy || truthy
@@ -232,3 +233,15 @@ const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 console.log(guests1);
 
 const guests2 = restaurant.numGuests || 10;
+
+console.log('-------AND-------');
+
+console.log(0 && 'Ahmed'); // 0
+console.log(7 && 'Ahmed'); // Ahmed
+console.log(23 && 'Ahmed' && null && 87); // Null
+
+// example
+if (restaurant.orderPizza) {
+  restaurant.orderPizza('mushrooms', 'salami');
+}
+restaurant.orderPizza && restaurant.orderPizza('mashrooms', 'salami');

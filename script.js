@@ -273,8 +273,11 @@ const rest2 = { name: 'La Piazza', owner: 'Luca Toni' };
 
 // console.log(rest1);
 
-rest2.owner = rest2.owner && 'Ananymous';
+// rest2.owner = rest2.owner && 'Ananymous';
 
-rest1.owner = rest1.owner && 'Ananymous';
+// rest1.owner = rest1.owner && 'Ananymous';
+
+rest1.owner &&= 'Ananymous';
+rest2.owner &&= 'Ananymous';
 
 console.log(rest1, rest2);

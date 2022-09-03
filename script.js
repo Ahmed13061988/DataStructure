@@ -67,9 +67,9 @@ const {
 
 //console.log(restaurantName, hours, tags);
 
-const { menu = [], starterMenu: starters = [] } = restaurant;
+const { mainMenu: menu = [], starterMenu: starters = [] } = restaurant;
 
-//console.log(menu, starters);
+console.log(menu, starters);
 
 //Mutating a variables in Object
 let a = 111;
@@ -241,13 +241,16 @@ console.log(7 && 'Ahmed'); // Ahmed
 console.log(23 && 'Ahmed' && null && 87); // Null
 
 // example
-if (restaurant.orderPizza) {
-  restaurant.orderPizza('mushrooms', 'salami');
-}
-restaurant.orderPizza && restaurant.orderPizza('mashrooms', 'salami');
+// if (restaurant.orderPizza) {
+//   restaurant.orderPizza('mushrooms', 'salami');
+// }
+// restaurant.orderPizza && restaurant.orderPizza('mashrooms', 'salami');
 
-//Nullish operator ??
+// //Nullish operator ??
 
-restaurant.guests = 0;
-const guest = restaurant.guest ?? 10;
-console.log(guest);
+// restaurant.guests = 0;
+// const guest = restaurant.guest ?? 10;
+// console.log(guest);
+
+const rest1 = { name: 'capri', numGuests: 20 };
+const rest2 = { name: 'La Piazza', owner: 'Luca Toni' };

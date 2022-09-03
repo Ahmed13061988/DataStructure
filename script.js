@@ -252,7 +252,23 @@ console.log(23 && 'Ahmed' && null && 87); // Null
 // const guest = restaurant.guest ?? 10;
 // console.log(guest);
 
-const rest1 = { name: 'capri', numGuests: 20 };
+const rest1 = { name: 'capri', numGuests: 0 };
 const rest2 = { name: 'La Piazza', owner: 'Luca Toni' };
 
-rest2.numGuests = rest2.numGuests || 10;
+// rest1.numGuests = rest1.numGuests || 10;
+
+// rest1.numGuests ||= 10;
+
+// rest2.numGuests = rest2.numGuests || 10;
+
+// rest2.numGuests ||= 10;
+
+// console.log(rest1, rest2);
+
+rest2.numGuests ??= 10;
+
+console.log(rest2);
+
+rest1.numGuests ??= 20;
+
+console.log(rest1);

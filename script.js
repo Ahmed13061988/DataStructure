@@ -254,3 +254,5 @@ console.log(23 && 'Ahmed' && null && 87); // Null
 
 const rest1 = { name: 'capri', numGuests: 20 };
 const rest2 = { name: 'La Piazza', owner: 'Luca Toni' };
+
+rest2.numberOfGuests = rest1.numGuests || 10;

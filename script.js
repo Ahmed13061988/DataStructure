@@ -265,10 +265,16 @@ const rest2 = { name: 'La Piazza', owner: 'Luca Toni' };
 
 // console.log(rest1, rest2);
 
-rest2.numGuests ??= 10;
+// rest2.numGuests ??= 10;
 
-console.log(rest2);
+// console.log(rest2);
 
-rest1.numGuests ??= 20;
+// rest1.numGuests ??= 20;
 
-console.log(rest1);
+// console.log(rest1);
+
+rest2.owner = rest2.owner && 'Ananymous';
+
+rest1.owner = rest1.owner && 'Ananymous';
+
+console.log(rest1, rest2);

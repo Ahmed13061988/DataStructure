@@ -277,7 +277,10 @@ const rest2 = { name: 'La Piazza', owner: 'Luca Toni' };
 
 // rest1.owner = rest1.owner && 'Ananymous';
 
-rest1.owner &&= 'Ananymous';
-rest2.owner &&= 'Ananymous';
+// rest1.owner &&= 'Ananymous';
+// rest2.owner &&= 'Ananymous';
 
-console.log(rest1, rest2);
+// console.log(rest1, rest2);
+
+// const numbers = [1,2,3,4];
+// const numbers1 = ...numbers;

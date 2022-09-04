@@ -57,39 +57,39 @@ const restaurant = {
   },
 };
 
-const { name, openingHours, categories } = restaurant;
-//console.log(name, openingHours, categories);
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
+// const { name, openingHours, categories } = restaurant;
+// //console.log(name, openingHours, categories);
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
 
-//console.log(restaurantName, hours, tags);
+// //console.log(restaurantName, hours, tags);
 
-const { mainMenu: menu = [], starterMenu: starters = [] } = restaurant;
+// const { mainMenu: menu = [], starterMenu: starters = [] } = restaurant;
 
-console.log(menu, starters);
+// console.log(menu, starters);
 
-//Mutating a variables in Object
-let a = 111;
-let b = 999;
-const obj = { a: 23, b: 7, c: 14 };
-({ a, b } = obj);
-//console.log(a, b);
+// //Mutating a variables in Object
+// let a = 111;
+// let b = 999;
+// const obj = { a: 23, b: 7, c: 14 };
+// ({ a, b } = obj);
+// //console.log(a, b);
 
-//Nested object distruction
-const {
-  fri: { open: o, close: c },
-} = openingHours;
-//console.log(o, c);
+// //Nested object distruction
+// const {
+//   fri: { open: o, close: c },
+// } = openingHours;
+// //console.log(o, c);
 
-restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Via del Sole, 21',
-  mainIndex: 2,
-  startIndex: 2,
-});
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   address: 'Via del Sole, 21',
+//   mainIndex: 2,
+//   startIndex: 2,
+// });
 // const arr = [1, 2, 3];
 
 // const a = arr[0];
@@ -212,48 +212,48 @@ restaurant.orderDelivery({
 
 // console.log(anythingElse);
 
-//||
-console.log('------OR------');
-console.log(3 || 'AHMED'); // truthy || truthy
+// //||
+// console.log('------OR------');
+// console.log(3 || 'AHMED'); // truthy || truthy
 
-console.log(0 || 'hello'); // falsy || truthy
+// console.log(0 || 'hello'); // falsy || truthy
 
-console.log(true || false);
+// console.log(true || false);
 
-console.log(true || 0);
+// console.log(true || 0);
 
-console.log(false || false);
+// console.log(false || false);
 
-console.log(undefined || 0 || '' || 'Hello' || 23 || null); // this will return the first truthy value;
+// console.log(undefined || 0 || '' || 'Hello' || 23 || null); // this will return the first truthy value;
 
-console.log(undefined || null || false || 0 || '');
+// console.log(undefined || null || false || 0 || '');
 
-const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// const guests1 = restaurant.numGuests ? restaurant.numGuests : 10;
 
-console.log(guests1);
+// console.log(guests1);
 
-const guests2 = restaurant.numGuests || 10;
+// const guests2 = restaurant.numGuests || 10;
 
-console.log('-------AND-------');
+// console.log('-------AND-------');
 
-console.log(0 && 'Ahmed'); // 0
-console.log(7 && 'Ahmed'); // Ahmed
-console.log(23 && 'Ahmed' && null && 87); // Null
+// console.log(0 && 'Ahmed'); // 0
+// console.log(7 && 'Ahmed'); // Ahmed
+// console.log(23 && 'Ahmed' && null && 87); // Null
 
-// example
-// if (restaurant.orderPizza) {
-//   restaurant.orderPizza('mushrooms', 'salami');
-// }
-// restaurant.orderPizza && restaurant.orderPizza('mashrooms', 'salami');
+// // example
+// // if (restaurant.orderPizza) {
+// //   restaurant.orderPizza('mushrooms', 'salami');
+// // }
+// // restaurant.orderPizza && restaurant.orderPizza('mashrooms', 'salami');
 
-// //Nullish operator ??
+// // //Nullish operator ??
 
-// restaurant.guests = 0;
-// const guest = restaurant.guest ?? 10;
-// console.log(guest);
+// // restaurant.guests = 0;
+// // const guest = restaurant.guest ?? 10;
+// // console.log(guest);
 
-const rest1 = { name: 'capri', numGuests: 0 };
-const rest2 = { name: 'La Piazza', owner: 'Luca Toni' };
+// const rest1 = { name: 'capri', numGuests: 0 };
+// const rest2 = { name: 'La Piazza', owner: 'Luca Toni' };
 
 // rest1.numGuests = rest1.numGuests || 10;
 
@@ -284,3 +284,7 @@ const rest2 = { name: 'La Piazza', owner: 'Luca Toni' };
 
 // const numbers = [1,2,3,4];
 // const numbers1 = ...numbers;
+
+const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
+
+for (let item of menu) console.log(item);

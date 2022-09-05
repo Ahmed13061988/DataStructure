@@ -308,3 +308,11 @@ const restaurant = {
 console.log(restaurant.openingHours.mon?.open);
 
 console.log(restaurant.openingHours?.mon?.open); // if opening hours not exist it will give you undefined instead of error
+
+//example
+
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+for (const day of days) {
+  console.log(restaurant.openingHours[day]?.open);
+}

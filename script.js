@@ -319,3 +319,9 @@ for (const day of days) {
 }
 
 console.log(restaurant.order1?.(1, 0) ?? 'Method does not exist');
+
+//Arrays
+
+const users = [{ name: 'Ahmed', age: 34 }];
+
+console.log(users[4]?.name ?? 'users array empty');

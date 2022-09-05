@@ -314,5 +314,6 @@ console.log(restaurant.openingHours?.mon?.open); // if opening hours not exist i
 const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
 for (const day of days) {
-  console.log(restaurant.openingHours[day]?.open);
+  const open = restaurant.openingHours[day]?.open;
+  console.log(`On ${day} it's open from ${open}`);
 }

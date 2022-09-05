@@ -314,6 +314,8 @@ console.log(restaurant.openingHours?.mon?.open); // if opening hours not exist i
 const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
 for (const day of days) {
-  const open = restaurant.openingHours[day]?.open || 'closed';
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
   console.log(`On ${day} it's open from ${open}`);
 }
+
+console.log(restaurant.order1?.(1, 0) ?? 'Method does not exist');

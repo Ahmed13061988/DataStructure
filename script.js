@@ -304,3 +304,7 @@ const restaurant = {
 // for (let [i, el] of menu.entries()) {
 //   console.log(`${i + 1}: ${el}`);
 // }
+
+console.log(restaurant.openingHours.mon?.open);
+
+console.log(restaurant.openingHours?.mon?.open); // if opening hours not exist it will give you undefined instead of error

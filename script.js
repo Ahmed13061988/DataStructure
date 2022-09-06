@@ -337,4 +337,9 @@ for (const day of Object.keys(openingHours)) {
   openSrt += ` ${day} `;
 }
 
-console.log(openSrt);
+const values = Object.values(openingHours);
+console.log(values);
+
+for (const day of Object.values(openingHours)) {
+  console.log(day);
+}

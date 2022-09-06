@@ -305,9 +305,9 @@ const restaurant = {
 //   console.log(`${i + 1}: ${el}`);
 // }
 
-console.log(restaurant.openingHours.mon?.open);
+//console.log(restaurant.openingHours.mon?.open);
 
-console.log(restaurant.openingHours?.mon?.open); // if opening hours not exist it will give you undefined instead of error
+//console.log(restaurant.openingHours?.mon?.open); // if opening hours not exist it will give you undefined instead of error
 
 //example
 
@@ -315,13 +315,19 @@ const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
 
 for (const day of days) {
   const open = restaurant.openingHours[day]?.open ?? 'closed';
-  console.log(`On ${day} it's open from ${open}`);
+  //console.log(`On ${day} it's open from ${open}`);
 }
 
-console.log(restaurant.order1?.(1, 0) ?? 'Method does not exist');
+//console.log(restaurant.order1?.(1, 0) ?? 'Method does not exist');
 
 //Arrays
 
 const users = [{ name: 'Ahmed', age: 34 }];
 
-console.log(users[4]?.name ?? 'users array empty');
+//console.log(users[4]?.name ?? 'users array empty');
+
+//Looping over keys in object
+
+for (const day of Object.keys(openingHours)) {
+  console.log(day);
+}

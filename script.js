@@ -336,10 +336,20 @@ let openSrt = `We are open in ${properties.length} days:`;
 for (const day of Object.keys(openingHours)) {
   openSrt += ` ${day} `;
 }
+//Looping over values of object
 
 const values = Object.values(openingHours);
 console.log(values);
 
 for (const day of Object.values(openingHours)) {
   console.log(day);
+}
+
+//Looping over the keys and values both
+
+const enteries = Object.entries(openingHours);
+
+for (const [key, { open, close }] of enteries) {
+  // dayOpening.push(day);
+  console.log(`On ${key}, we open at ${open} and close at ${close}`);
 }

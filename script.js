@@ -16,7 +16,7 @@ const openingHours = {
     open: 11,
     close: 23,
   },
-  [`Day-${[weekDays[5]]}`]: {
+  [[weekDays[5]]]: {
     open: 0, // Open 24 hours
     close: 24,
   },
@@ -328,6 +328,13 @@ const users = [{ name: 'Ahmed', age: 34 }];
 
 //Looping over keys in object
 
+const properties = Object.keys(openingHours);
+console.log(properties);
+
+let openSrt = `We are open in ${properties.length} days:`;
+
 for (const day of Object.keys(openingHours)) {
-  console.log(day);
+  openSrt += ` ${day} `;
 }
+
+console.log(openSrt);
